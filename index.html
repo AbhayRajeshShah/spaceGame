@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            car race
+        </title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+            background-color: #17b17d;
+        }
+        #score{
+            position: absolute;
+            top: 50px;
+            left: 66%;
+            font-size: 1.15rem;
+            letter-spacing: 4px;
+            color: white;
+        }
+        .gameOver{
+            display: none;
+        }
+        .active{
+            display: block;
+            position: absolute;
+            top: 30%;
+            left: 45%;
+            padding: 2rem;
+            background-color: #000000;
+            box-shadow: 2px 2px 25px #ffffff;
+            color: white;
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            border-radius:1.15rem;
+        }
+        #restart{
+            appearance: none;
+            padding: 1rem 2rem;
+            margin: 2rem;
+            border-radius: 1.15rem;
+            background-color: #dd5634;
+            border: none;
+            outline: none;
+        }
+        #restart:hover{
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <p id="score">Score:0</p>
+        <div class="gameOver">
+            <p>Game Over</p>
+            <p id="scoree">Score:</p>
+            <p id="highscore"></p>
+            <button id="restart">Restart</button>
+        </div>
+        <canvas id="gameCanvas" height="600" width="800"></canvas>
+    </body>
+    <script src="js/graphics.js"></script>
+    <script src="js/parentClass.js"></script>
+    <script src="js/image.js"></script>
+    <script src="js/shotgunUfo.js"></script>
+    <script src="js/sniper.js"></script>
+    <script src="js/ufo.js"></script>
+    <script src="js/shot.js"></script>
+    <script src="js/car.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/input.js"></script>
+    
+    
+</html>
