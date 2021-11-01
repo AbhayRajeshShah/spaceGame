@@ -12,7 +12,7 @@ const spaceBar=32;
 document.addEventListener("keydown",keyPressed);
 document.addEventListener("keyup",keyRelease);
 
-blueCar.controls(up_arrow,right_arrow,left_arrow,spaceBar);
+warship.controls(up_arrow,right_arrow,left_arrow,spaceBar);
 
 function setInput(event,whichCar,setTo){   
     if(event.keyCode==whichCar.upar){
@@ -28,11 +28,28 @@ function setInput(event,whichCar,setTo){
     }        
 }
 
+document.addEventListener("mousedown",()=>{
+    enemy.play();  
+})
+
 
 function keyPressed(evt){
-   setInput(evt,blueCar,true);
+   setInput(evt,warship,true);
 }
 function keyRelease(evt){
-    setInput(evt,blueCar,false);
+    setInput(evt,warship,false);
 }
 
+document.addEventListener("keydown",(evt)=>{
+if(evt.keyCode===27){
+    paused.classList.toggle("play")
+        if(pause){
+            started=true;
+            pause=false;           
+        }else{
+            started=false;
+            pause=true;
+        }       
+    }
+
+})

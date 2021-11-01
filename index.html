@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            car race
+            Space
         </title>
     </head>
     <style>
@@ -33,6 +33,9 @@
             letter-spacing: 2px;
             border-radius:1.15rem;
         }
+        .tah_audio{
+            display: none;
+        }
         #restart{
             appearance: none;
             padding: 1rem 2rem;
@@ -45,6 +48,18 @@
         #restart:hover{
             cursor: pointer;
         }
+        #pause{
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 46%;
+            font-size: 2rem;
+            color: white;
+            letter-spacing: 2px;
+        }
+        #pause.play{
+            display: block;
+        }
     </style>
     <body>
         <p id="score">Score:0</p>
@@ -54,7 +69,9 @@
             <p id="highscore"></p>
             <button id="restart">Restart</button>
         </div>
+        <p id="pause">Paused</p>
         <canvas id="gameCanvas" height="600" width="800"></canvas>
+        <audio id="tah_audio" src="sounds/enemy.mp3" loop="loop"></audio>
     </body>
     <script src="js/graphics.js"></script>
     <script src="js/parentClass.js"></script>
@@ -63,7 +80,7 @@
     <script src="js/sniper.js"></script>
     <script src="js/ufo.js"></script>
     <script src="js/shot.js"></script>
-    <script src="js/car.js"></script>
+    <script src="js/player.js"></script>
     <script src="js/index.js"></script>
     <script src="js/input.js"></script>
     
